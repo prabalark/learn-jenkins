@@ -10,6 +10,10 @@ pipeline {
      sample = "example.com"
   }
 
+  options {
+     ansiColor('xterm')
+  }
+
   parameters {
      string(name: 'PERSON', defaultValue: 'Mr prabala', description: 'Who should I say hello to?')
   }
