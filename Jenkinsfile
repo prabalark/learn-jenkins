@@ -31,8 +31,6 @@ pipeline {
        steps {
          sh 'env'
        }
-
-      }
      }
   }
 
