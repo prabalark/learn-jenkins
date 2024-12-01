@@ -11,7 +11,7 @@ pipeline {
   }
 
   parameters {
-     string(name: 'NAME', defaultValue: 'Mr prabala', description: 'Who should I say hello to?')
+     string(name: 'PERSON', defaultValue: 'Mr prabala', description: 'Who should I say hello to?')
   }
 
   stages {
@@ -21,7 +21,7 @@ pipeline {
          sh 'echo Hello World'
          sh 'echo Hello universe'
          sh 'echo ${sample}'
-         sh 'echo name - ${NAME}'
+         sh 'echo PERSON - ${PERSON}'
        }
      }
   }
