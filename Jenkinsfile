@@ -1,8 +1,8 @@
 pipeline{
 
   agent {
-    node {
-     label 'workstation'
+     node {
+       label 'workstation'
    }
   }
 
