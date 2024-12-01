@@ -26,7 +26,7 @@ pipeline {
          sh 'echo ${sample}'
          sh 'echo name - ${PERSON}'
        }
-
+     }
      stage('two') {
        steps {
          sh 'env'
