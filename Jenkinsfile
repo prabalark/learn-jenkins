@@ -42,11 +42,11 @@ pipeline {
          stage('Three') {
            when {
              expression {
-               GIT_BRANCH == "origin/test"
+               GIT_BRANCH == "origin/main"
              }
            }
            steps {
-             sh 'env'
+             sh 'echo hello'
            }
          }
        }
