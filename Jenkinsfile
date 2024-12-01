@@ -21,6 +21,6 @@ pipeline{
 
   post {
      always {
-        sh 'echo post cleanup steps'
+       sh 'echo post cleanup steps'
      }
   }
