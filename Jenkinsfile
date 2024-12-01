@@ -10,6 +10,10 @@ pipeline {
      sample = "example.com"
   }
 
+  parameters {
+     string(name: name, defaultValue: 'Mr prabala', description: 'Who should I say hello to?')
+  }
+
   stages {
 
      stage('one') {
@@ -17,6 +21,7 @@ pipeline {
          sh 'echo Hello World'
          sh 'echo Hello universe'
          sh 'echo ${sample}'
+         sh 'echo name - ${name}'
        }
      }
   }
