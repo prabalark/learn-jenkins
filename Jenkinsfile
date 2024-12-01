@@ -11,7 +11,7 @@ pipeline {
   }
 
   parameters {
-     string(name: name, defaultValue: 'Mr prabala', description: 'Who should I say hello to?')
+     string(name: 'name', defaultValue: 'Mr prabala', description: 'Who should I say hello to?')
   }
 
   stages {
