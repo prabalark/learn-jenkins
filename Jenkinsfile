@@ -15,26 +15,30 @@ pipeline {
   }
 
   stages {
-     stage('one') {
-       input {
-         message "Should we continue?"
-         ok "Yes, we should."
-       }
-       steps {
-         sh 'echo Hello World'
-         sh 'echo Hello universe'
-         sh 'echo ${sample}'
-         sh 'echo name - ${PERSON}'
-       }
-     }
-     stage('Two') {
-       when {
-         expression {
-           GIT_BRANCH == "origin/main"
+     stage('parallel') {
+       parallel {
+         stage('one') {
+           input {
+             message "Should we continue?"
+             ok "Yes, we should."
+           }
+           steps {
+             sh 'echo Hello World'
+             sh 'echo Hello universe'
+             sh 'echo ${sample}'
+             sh 'echo name - ${PERSON}'
+           }
          }
-       }
-       steps {
-         sh 'env'
+         stage('Two') {
+           when {
+             expression {
+               GIT_BRANCH == "origin/test"
+             }
+           }
+           steps {
+             sh 'env'
+           }
+         }
        }
      }
   }
