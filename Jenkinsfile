@@ -2,7 +2,7 @@ pipeline{
 
   agent {
      node {
-       label 'terraform-workstation'
+       label 'terraform-workstation' # have to give instance name
    }
   }
 
