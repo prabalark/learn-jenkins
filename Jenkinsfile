@@ -1,4 +1,4 @@
-pipeline{
+pipeline {
 
   agent {
      node {
@@ -17,10 +17,11 @@ pipeline{
      }
   }
 
-}
-
   post {
      always {
        sh 'echo post cleanup steps'
      }
   }
+
+}
+
