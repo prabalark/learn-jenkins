@@ -21,7 +21,7 @@ pipeline {
          sh 'echo Hello World'
          sh 'echo Hello universe'
          sh 'echo ${sample}'
-         sh 'echo PERSON - ${PERSON}'
+         sh 'echo name - ${PERSON}'
        }
      }
   }
