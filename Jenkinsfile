@@ -27,7 +27,7 @@ pipeline {
          sh 'echo name - ${PERSON}'
        }
      }
-     stage('two') {
+     stage('Two') {
        when {
          expression {
            GIT_BRANCH=origin/test
