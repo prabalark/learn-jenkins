@@ -39,6 +39,16 @@ pipeline {
              sh 'env'
            }
          }
+         stage('Three') {
+           when {
+             expression {
+               GIT_BRANCH == "origin/test"
+             }
+           }
+           steps {
+             sh 'env'
+           }
+         }
        }
      }
   }
